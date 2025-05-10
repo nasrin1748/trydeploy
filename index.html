@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>local modules</title>
+    <!-- linking to PyScript assets --> 
+      
+    <link rel="stylesheet" href="https://pyscript.net/releases/2025.2.1/core.css" />
+      
+    <script defer src="https://pyscript.net/releases/2023.03.1/pyscript.js"></script>
+  </head>
+  <body>
+      <py-config>
+        "packages" = ["pandas",]
+        [[fetch]]
+        files = ["./main.py","./app.py"]
+      </py-config>
+<div id="mydiv"></div>               
+       <py-repl id="my-repl" auto-generate="true">   
+            print("hello")
+            import os
+            print(os.getcwd())
+        </py-repl>        
+  </body>
+</html>
